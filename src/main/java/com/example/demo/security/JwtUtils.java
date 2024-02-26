@@ -24,7 +24,7 @@ public class JwtUtils {
 		return Jwts.builder().setSubject(nombre).setSubject("Hola Mundo").setIssuedAt(new Date())
 				.setExpiration(new Date(System.currentTimeMillis() + this.jwtExpirationMs))
 				.signWith(SignatureAlgorithm.HS512,
-						"miSemillaEsDeMasCaryuyuyuyuyuy27834672364782364782dghhjsdgf5656565675765ghgfhgfghfghfhfhjfh6687687687")
+						this.jwtSemilla)
 				.compact();
 	}
 }
